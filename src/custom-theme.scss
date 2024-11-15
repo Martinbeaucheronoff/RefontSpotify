@@ -1,0 +1,40 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single CSS file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define custom palettes
+$custom-primary: mat.define-palette(mat.$orange-palette, 500, 300, 700); // Orange
+$custom-accent: mat.define-palette(mat.$grey-palette, 900, 800, 700);     // Noir/Gris foncé
+$custom-warn: mat.define-palette(mat.$red-palette);                      // Rouge (par défaut pour les warnings)
+
+// Define the theme object
+$RefontSpotify-theme: mat.define-light-theme((
+  color: (
+    theme-type: light,
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+  density: (
+    scale: 0, // Default density
+  ),
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($RefontSpotify-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($RefontSpotify-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($RefontSpotify-theme);
