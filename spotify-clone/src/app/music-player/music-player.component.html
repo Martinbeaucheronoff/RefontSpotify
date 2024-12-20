@@ -1,0 +1,17 @@
+<div class="card w-96 bg-base-100 shadow-xl mx-auto mt-5" *ngIf="currentSong">
+  <div class="card-body">
+    <h2 class="card-title">Now Playing</h2>
+    <p>{{ currentSong.title }} - {{ currentSong.artist }}</p>
+    <audio #audio controls class="w-full"></audio>
+
+    <!-- Controls for Loop and Shuffle -->
+    <div class="flex justify-around mt-4">
+      <button class="btn btn-secondary" (click)="toggleLoop()">
+        🔁 {{ isLooping ? 'Disable Loop' : 'Loop' }}
+      </button>
+      <button class="btn btn-primary" (click)="toggleShuffle()">
+        🔀 {{ isShuffling ? 'Disable Shuffle' : 'Shuffle' }}
+      </button>
+    </div>
+  </div>
+</div>

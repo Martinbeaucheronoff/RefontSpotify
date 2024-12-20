@@ -1,0 +1,20 @@
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let song of musicLibrary" [class.selected]="selectedSongId === song.id">
+      <td>{{ song.title }}</td>
+      <td>{{ song.artist }}</td>
+      <td>
+        <button class="btn btn-primary btn-sm" (click)="onSelect(song)">Play</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

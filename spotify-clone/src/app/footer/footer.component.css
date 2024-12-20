@@ -1,0 +1,5 @@
+.footer {
+  @apply bg-base-300 text-center py-4 text-neutral-content; /* DaisyUI classes */
+  font-size: 0.85rem; /* Optionnel : Ajustez la taille du texte */
+  justify-content: center;
+}

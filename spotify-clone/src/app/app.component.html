@@ -1,0 +1,6 @@
+<app-header (searchQuery)="updateSearch($event)"></app-header>
+<div class="container mx-auto mt-5">
+  <app-music-list [searchQuery]="searchQuery" (songSelected)="selectedSong = $event"></app-music-list>
+  <app-music-player [currentSong]="selectedSong"></app-music-player>
+</div>
+<app-footer></app-footer>
