@@ -45,7 +45,9 @@ export class MusicPlayerComponent implements OnChanges {
   toggleShuffle() {
     this.isShuffling = !this.isShuffling;
     if (this.isShuffling) {
-      this.playRandomSong();
+      this.audioRef.nativeElement.onended = () => this.playRandomSong();
+    } else {
+      this.audioRef.nativeElement.onended = null;
     }
   }
 

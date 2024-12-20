@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class MusicService {
   private musicLibrary = [
-    { id: 1, title: 'Reflet', artist: 'Mwa', url: 'assets/music/Reflet.mp3' },
-    { id: 2, title: 'Ma Meilleur Ennemie', artist: 'Stromae, Pomme', url: 'assets/music/Ma Meilleure Ennemie-Stromae.mp3' },
-    { id: 3, title: 'FMB supremacy', artist: 'Dizzy Crush', url: 'assets/music/femboy supremacy.mp3' },
+    { id: 1, title: 'Reflet', artist: 'Mwa', url: 'assets/music/Reflet.mp3', image: 'assets/images/reflet.jpg' },
+    { id: 2, title: 'Ma Meilleur Ennemie', artist: 'Stromae, Pomme', url: 'assets/music/Ma Meilleure Ennemie-Stromae.mp3', image: 'assets/images/ma_meilleure_ennemie.jpg' },
+    { id: 3, title: 'FMB supremacy', artist: 'Dizzy Crush', url: 'assets/music/femboy supremacy.mp3', image: 'assets/images/fmb_supremacy.jpg' },
   ];
 
   getMusicLibrary(query: string = '') {

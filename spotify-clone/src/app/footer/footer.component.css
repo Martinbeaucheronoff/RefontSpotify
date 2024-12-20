@@ -1,5 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuration pour que le footer soit sticky */
+html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
 .footer {
-  @apply bg-base-300 text-center py-4 text-neutral-content; /* DaisyUI classes */
-  font-size: 0.85rem; /* Optionnel : Ajustez la taille du texte */
-  justify-content: center;
+  position: absolute;
+  width: 100%; height: 50px;
+  bottom: 0; left: 0; right: 0;
+  background-color: #d1d5db; /* Couleur de fond ajustée pour correspondre à votre thème */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
 }
